@@ -6,7 +6,7 @@ pkgdesc='Standalone Vim configuration'
 arch=('any')
 url='https://github.com/MichaelWeissDEV/dotfiles'
 license=('LicenseRef-arch-dotfiles-bundle')
-depends=('arch-dotfiles-core>=0.3.0' 'vim')
+depends=('arch-dotfiles-core>=0.3.0' 'vim>=8.2')
 optdepends=()
 options=('!strip')
 source=('payload.tar.gz')

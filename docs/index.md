@@ -32,6 +32,7 @@ A lightweight, zero-plugin **Vim** configuration crafted in the official **Catpp
 :caption: User Guide
 
 installation
+packages
 configuration
 keybindings
 statusline
@@ -64,25 +65,10 @@ ln -sfn ~/.config/vim/vimrc ~/.vimrc
 mkdir -p ~/.local/state/vim/undo
 ```
 
-### In the Arch Dotfiles Repository
+### Managed Arch package
 
-This repository is maintained as a **Git Subtree** at `vim/` inside `~/git/dotfiles`:
-
-```bash
-# Update everything (system, dotfiles & all subtrees):
-adot update
-# (also available as: arch-dot update / arch-dotfiles update)
-
-# Update only the vim subtree from upstream:
-adot update vim
-
-# Inspect status or Vim keybindings:
-adot status
-adot keys vim
-
-# Push local changes back to upstream:
-adot push vim
-```
+This repository is independent, not embedded as a parent subtree. See
+{doc}`packages` for signed installation, updates and safe restoration of backups.
 
 ---
 

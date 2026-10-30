@@ -2,6 +2,9 @@
 
 This guide details how to install, configure, and maintain `vim-config` as a standalone editor setup or as part of the broader dotfiles ecosystem.
 
+For managed Arch installation, safe updates and backup restoration, see
+{doc}`packages`. The standalone setup below is a separate alternative.
+
 ---
 
 ## Requirements
@@ -57,31 +60,9 @@ The editor starts instantly with no warnings or external downloads.
 
 ## Integration within the Arch Dotfiles Repository
 
-If you are using the central [Arch Dotfiles Hub (`arch-dotfiles`)](https://arch-dotfiles.readthedocs.io/en/latest/), `vim-config` is embedded as a Git subtree in `~/git/dotfiles/vim`.
-
-The central CLI program **`adot`** (also accessible as `arch-dot` or `arch-dotfiles`) automatically links and manages the files:
-
-```bash
-adot install
-# or recreate symlinks only:
-adot links
-```
-
-### Synchronizing Changes
-
-To update everything or just the `vim` subtree from GitHub:
-
-```bash
-adot update
-# or pull only vim:
-adot update vim
-```
-
-To contribute local edits made in `vim/` back to the upstream remote:
-
-```bash
-adot push vim
-```
+Vim is distributed as the independent `arch-dotfiles-vim` package, not a parent
+subtree. See {doc}`packages` for the one-command installer, `pacman -Syu`, safe
+configuration updates and separate development checkouts.
 
 ---
 
@@ -106,10 +87,7 @@ State and session files are placed according to the XDG Base Directory specifica
 
 ## Uninstallation
 
-To remove `vim-config` and restore defaults:
-
-```bash
-rm -f ~/.vimrc
-rm -rf ~/.config/vim
-rm -rf ~/.local/state/vim
-```
+For package-managed installations, run `arch-dotfiles-config deactivate vim`
+before removing the package; see {doc}`packages`. For standalone installations,
+review the `.vimrc` link, move the configuration aside and restore your backup.
+Persistent undo/history is personal data and should not be deleted automatically.
