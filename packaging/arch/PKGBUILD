@@ -1,0 +1,17 @@
+# Package-local recipe. Stage checksummed sources with packaging/arch/build.sh.
+pkgname=arch-dotfiles-vim
+pkgver=0.3.0
+pkgrel=1
+pkgdesc='Standalone Vim configuration'
+arch=('any')
+url='https://github.com/MichaelWeissDEV/dotfiles'
+license=('LicenseRef-arch-dotfiles-bundle')
+depends=('arch-dotfiles-core>=0.3.0' 'vim')
+optdepends=()
+options=('!strip')
+source=('payload.tar.gz')
+sha256sums=('__SOURCE_SHA256__')
+
+package() {
+    cp -a "$srcdir/usr" "$pkgdir/"
+}
